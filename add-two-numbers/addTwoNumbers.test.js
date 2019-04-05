@@ -32,6 +32,10 @@ describe('Add two numbers', function() {
 	});
 
 	it('should not add more than 2 operands', function() {
-		expect(addTwoNumbers(2, 3, 4)).toBe('Invalid input: Can only add two numbers');
+		expect(addTwoNumbers(2, 3, 4)).toBe('Invalid input: You must provide two numbers only.');
+	});
+
+	it('should not add less than two operands', function() {
+		expect(addTwoNumbers(1)).toBe('Invalid input: You must provide two numbers only.');
 	});
 });
