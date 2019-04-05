@@ -15,10 +15,16 @@ describe('Add two numbers', function() {
 		expect(addTwoNumbers(-2.4, 2)).toBe(-0.4);
 	});
 
-	it('should allow for automatic type coercion of string numbers', function() {
+	it('should allow for automatic type coercion of string integer type numbers', function() {
 		expect(addTwoNumbers('2', '2')).toBe(4);
 		expect(addTwoNumbers('-3', '9')).toBe(6);
 		expect(addTwoNumbers('-5', '-7')).toBe(-12);
+	});
+
+	it('should allow for automatic type coercion of string floating type numbers', function() {
+		expect(addTwoNumbers('2.2', '9.1')).toBe(11.3);
+		expect(addTwoNumbers('-3.7', '4.8')).toBe(1.1);
+		expect(addTwoNumbers('-5.5', '-7.3')).toBe(-12.8);
 	});
 
 	it('should not add values that are not numbers or values that cannot be coerced to numbers', function() {
