@@ -30,4 +30,8 @@ describe('Add two numbers', function() {
 	it('should not add values that are not numbers or values that cannot be coerced to numbers', function() {
 		expect(addTwoNumbers(2, 'men')).toBe(NaN);
 	});
+
+	it('should not add more than 2 operands', function() {
+		expect(addTwoNumbers(2, 3, 4)).toBe('Invalid input: Can only add two numbers');
+	});
 });
