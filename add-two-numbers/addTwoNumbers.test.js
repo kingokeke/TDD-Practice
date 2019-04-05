@@ -27,15 +27,17 @@ describe('Add two numbers', function() {
 		expect(addTwoNumbers('-5.5', '-7.3')).toBe(-12.8);
 	});
 
-	it('should not add values that are not numbers or values that cannot be coerced to numbers', function() {
-		expect(addTwoNumbers(2, 'men')).toBe(NaN);
-	});
-
 	it('should not add more than 2 operands', function() {
 		expect(addTwoNumbers(2, 3, 4)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(2, 3, 4, 3, 2)).toBe('Invalid input: You must provide two numbers only.');
 	});
 
 	it('should not add less than two operands', function() {
-		expect(addTwoNumbers(1)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(7)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers()).toBe('Invalid input: You must provide two numbers only.');
+	});
+
+	it('should not add values that are not numbers or values that cannot be coerced to numbers', function() {
+		expect(addTwoNumbers(2, 'men')).toBe('Invalid input: You must provide two numbers only.');
 	});
 });
