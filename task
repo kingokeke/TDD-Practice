@@ -1,0 +1,11 @@
+Create fully tested simple functions to perform the following operations.
+
+1.	Add two numbers
+2.	Add an indefinite amount of numbers
+3.	Takes two numbers as argument and return the difference between the numbers
+4.	Multiply an indefinite amount of arguments
+5.	Takes two numbers as arguments and returns the first number divided by the second number.
+6.	Takes a username as an argument and makes a call to GitHub API and returns all the repositories owned by the user as an array.
+7.	Takes two strings as arguments and return the concatenation of the two strings.
+
+NOTE: Your test should account for all possible edge cases. Also, make sure that all tests are failing before actual implementation. 

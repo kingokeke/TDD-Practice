@@ -1,0 +1,22 @@
+{
+	"name": "tdd-practice",
+	"version": "1.0.0",
+	"description": "This is a practice assessment of test driven development. The framework and language to be used will be Jest and JavaScript.",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --watchAll"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kingokeke/TDD-Practice.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kingokeke/TDD-Practice/issues"
+	},
+	"homepage": "https://github.com/kingokeke/TDD-Practice#readme",
+	"devDependencies": {
+		"jest": "^24.7.1"
+	}
+}
