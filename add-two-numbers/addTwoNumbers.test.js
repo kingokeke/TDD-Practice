@@ -3,10 +3,13 @@
 var addTwoNumbers = require('./addTwoNumbers.js');
 
 describe('Add two numbers', function() {
-	it('should add two numbers', function() {
+	it('should add two integer type numbers', function() {
 		expect(addTwoNumbers(1, 1)).toBe(2);
 		expect(addTwoNumbers(-3, 0)).toBe(-3);
 		expect(addTwoNumbers(-12, -9)).toBe(-21);
+	});
+
+	it('should add two floating type numbers', function() {
 		expect(addTwoNumbers(0.1, 0.2)).toBe(0.3);
 		expect(addTwoNumbers(0.2, 5)).toBe(5.2);
 		expect(addTwoNumbers(-2.4, 2)).toBe(-0.4);
