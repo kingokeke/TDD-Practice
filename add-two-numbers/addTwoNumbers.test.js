@@ -11,5 +11,7 @@ describe('Add two numbers', function() {
 
 	it('should allow for automatic type coercion of string numbers', function() {
 		expect(addTwoNumbers('2', '2')).toBe(4);
+		expect(addTwoNumbers('-3', '9')).toBe(6);
+		expect(addTwoNumbers('-5', '-7')).toBe(-12);
 	});
 });
