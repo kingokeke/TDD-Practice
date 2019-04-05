@@ -14,4 +14,8 @@ describe('Add two numbers', function() {
 		expect(addTwoNumbers('-3', '9')).toBe(6);
 		expect(addTwoNumbers('-5', '-7')).toBe(-12);
 	});
+
+	it('should not add values that are not numbers or values that cannot be coerced to numbers', function() {
+		expect(addTwoNumbers(2, 'men')).toBe(NaN);
+	});
 });
