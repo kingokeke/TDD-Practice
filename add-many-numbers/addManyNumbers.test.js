@@ -15,4 +15,8 @@ describe('Add many numbers', function() {
 	it('should allow for automatic type coercion of strings consisting of only numbers', function() {
 		expect(addManyNumbers('0.1', '0.1', '0.1')).toBe(0.3);
 	});
+
+	it('should not allow for addition of strings that do not consist of only numbers', function() {
+		expect(addManyNumbers('man', 2, '0.5')).toBe('Invalid input. Please enter only numbers');
+	});
 });
