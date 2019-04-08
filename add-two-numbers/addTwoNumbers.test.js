@@ -16,15 +16,15 @@ describe('Add two numbers', function() {
 	});
 
 	it('should allow for automatic type coercion of strings containing only an integer type number', function() {
-		expect(addTwoNumbers('2', '2')).toBe(4);
+		expect(addTwoNumbers('2', '0')).toBe(2);
 		expect(addTwoNumbers('-3', '9')).toBe(6);
 		expect(addTwoNumbers('-5', '-7')).toBe(-12);
 	});
 
 	it('should allow for addition between a number and a string containing a number', function() {
 		expect(addTwoNumbers('2', 7)).toBe(9);
-		expect(addTwoNumbers('-3', '9')).toBe(6);
-		expect(addTwoNumbers('-5', '-7')).toBe(-12);
+		expect(addTwoNumbers(-3.5, '5.8')).toBe(2.3);
+		expect(addTwoNumbers('-5', -7)).toBe(-12);
 	});
 
 	it('should allow for automatic type coercion of strings containing only a floating type number', function() {
@@ -40,6 +40,7 @@ describe('Add two numbers', function() {
 
 	it('should not add less than two operands', function() {
 		expect(addTwoNumbers(7)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(undefined, 13)).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers()).toBe('Invalid input: You must provide two numbers only.');
 	});
 
@@ -47,10 +48,13 @@ describe('Add two numbers', function() {
 		expect(addTwoNumbers(2, 'men')).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers(0.53, '')).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers(8, '2.3b')).toBe('Invalid input: You must provide two numbers only.');
-		expect(addTwoNumbers('5', [3])).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(-7.2, [])).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers('5', [3, 'ham'])).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers(0.7, true)).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers({}, -3)).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers({id: 5}, -9.4)).toBe('Invalid input: You must provide two numbers only.');
 		expect(addTwoNumbers({name: 'Kingsley'}, 4.1)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(32, NaN)).toBe('Invalid input: You must provide two numbers only.');
+		expect(addTwoNumbers(null, 8.43)).toBe('Invalid input: You must provide two numbers only.');
 	});
 });
