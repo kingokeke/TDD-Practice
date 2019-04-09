@@ -19,5 +19,6 @@ describe('List Github Repos', function() {
 
 	it('should accept ONLY one parameter', function() {
 		expect(listGithubRepos('kingokeke', 23)).toBe('Error');
+		expect(listGithubRepos()).toBe('Error');
 	});
 });
