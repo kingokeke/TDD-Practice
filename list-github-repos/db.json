@@ -1,0 +1,23 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"username": "kingokeke",
+			"repos": [
+				"decagon-chain",
+				"decagon-exchange",
+				"luhn-algorithm",
+				"decagon-chain-old",
+				"w3resource",
+				"alphabet-sum",
+				"drumkit-js30",
+				"analog-clock-js30",
+				"password-generator",
+				"markdown-resume",
+				"decagon-chain-old",
+				"zoom",
+				"largest-product-of-a-series"
+			]
+		}
+	]
+}
