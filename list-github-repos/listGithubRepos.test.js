@@ -10,5 +10,10 @@ describe('List Github Repos', function() {
 
 	it('should not allow parameters that are not strings', function() {
 		expect(listGithubRepos(900)).toBe('Error');
+		expect(listGithubRepos(null)).toBe('Error');
+		expect(listGithubRepos(undefined)).toBe('Error');
+		expect(listGithubRepos([23, 45, 67])).toBe('Error');
+		expect(listGithubRepos({id: 7, name: 'Bond'})).toBe('Error');
+		expect(listGithubRepos(true)).toBe('Error');
 	});
 });
