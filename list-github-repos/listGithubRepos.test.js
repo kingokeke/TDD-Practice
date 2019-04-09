@@ -7,4 +7,8 @@ describe('List Github Repos', function() {
 			expect(response.status).toBe(200);
 		});
 	});
+
+	it('should not allow parameters that are not strings', function() {
+		expect(listGithubRepos(900)).toBe('Error');
+	});
 });
