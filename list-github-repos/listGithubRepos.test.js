@@ -21,4 +21,10 @@ describe('List Github Repos', function() {
 		expect(listGithubRepos('kingokeke', 23)).toBe('Error');
 		expect(listGithubRepos()).toBe('Error');
 	});
+
+	it('should return an array of repository names', function() {
+		return listGithubRepos('kingokeke').then(function(response) {
+			expect(Array.isArray(response.data[0].repos)).toBeTruthy();
+		});
+	});
 });
