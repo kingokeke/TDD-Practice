@@ -16,4 +16,8 @@ describe('List Github Repos', function() {
 		expect(listGithubRepos({id: 7, name: 'Bond'})).toBe('Error');
 		expect(listGithubRepos(true)).toBe('Error');
 	});
+
+	it('should accept ONLY one parameter', function() {
+		expect(listGithubRepos('kingokeke', 23)).toBe('Error');
+	});
 });
