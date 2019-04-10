@@ -22,7 +22,7 @@ describe('List Github Repos', function() {
 		expect(listGithubRepos()).toBe('Error');
 	});
 
-	it('should return an array of repository names', function() {
+	it('should return an array of repository names when repos is accessed', function() {
 		return listGithubRepos('kingokeke').then(function(response) {
 			expect(Array.isArray(response.data[0].repos)).toBeTruthy();
 		});
